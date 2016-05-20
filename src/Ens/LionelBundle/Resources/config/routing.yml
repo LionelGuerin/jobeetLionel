@@ -5,3 +5,7 @@ ens_lionel_ens_job:
 ens_lionel_homepage:
     path:     /hello/{name}
     defaults: { _controller: EnsLionelBundle:Default:index }
+
+EnsLionelBundle_homepage:
+    path:  /
+    defaults: { _controller: EnsLionelBundle:Job:index }
