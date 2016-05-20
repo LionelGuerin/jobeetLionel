@@ -7,6 +7,8 @@ ens_job_show:
     path:     /{company}/{location}/{id}/{position}
     defaults: { _controller: "EnsLionelBundle:Job:show" }
     methods:  GET
+    requirements:
+            id:  \d+
 
 ens_job_new:
     path:     /new
