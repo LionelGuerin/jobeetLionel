@@ -1,7 +1,7 @@
 ens_lionel_ens_job:
     resource: "@EnsLionelBundle/Resources/config/routing/job.yml"
-    prefix:   /ens_job
+    prefix:   /job
 
 ens_lionel_homepage:
-    path:     /
+    path:     /hello/{name}
     defaults: { _controller: EnsLionelBundle:Default:index }
