@@ -1,4 +1,6 @@
-{% extends 'base.html.twig' %}
+{% extends 'EnsLionelBundle::layout.html.twig' %}
+
+{% block content %}
 
 {% block body %}
     <h1>Job edit</h1>
@@ -18,4 +20,5 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
+{% endblock %}
 {% endblock %}
