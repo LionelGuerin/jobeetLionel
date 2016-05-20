@@ -1,6 +1,6 @@
 <?php
 
-namespace Ens\LionelGuerinBundle\Controller;
+namespace Ens\LionelBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('EnsLionelGuerinBundle:Default:index.html.twig');
+        return $this->render('EnsLionelBundle:Default:index.html.twig');
     }
 }

@@ -1,3 +1,0 @@
-ens_lionel_guerin_homepage:
-    path:     /
-    defaults: { _controller: EnsLionelGuerinBundle:Default:index }

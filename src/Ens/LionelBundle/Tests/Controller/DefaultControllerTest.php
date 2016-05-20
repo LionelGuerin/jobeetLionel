@@ -1,6 +1,6 @@
 <?php
 
-namespace Ens\LionelGuerinBundle\Tests\Controller;
+namespace Ens\LionelBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

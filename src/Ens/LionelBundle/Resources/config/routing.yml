@@ -1,0 +1,3 @@
+ens_lionel_homepage:
+    path:     /
+    defaults: { _controller: EnsLionelBundle:Default:index }

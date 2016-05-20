@@ -1,5 +1,5 @@
-ens_lionel_guerin:
-    resource: "@EnsLionelGuerinBundle/Resources/config/routing.yml"
+ens_lionel:
+    resource: "@EnsLionelBundle/Resources/config/routing.yml"
     prefix:   /
 
 app:
