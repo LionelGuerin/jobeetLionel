@@ -45,17 +45,17 @@
     </div>
 
     <div id="content">
-        {#{% if app.session.hasFlash('notice') %}#}
-            {#<div class="flash_notice">#}
-                {#{{ app.session.flash('notice') }}#}
-            {#</div>#}
-        {#{% endif %}#}
+        {% if app.session.flashbag.get('notice') %}
+            <div class="flash_notice">
+                {{ flash_message }}
+            </div>
+        {% endif %}
 
-        {#{% if app.session.hasFlash('error') %}#}
-            {#<div class="flash_error">#}
-                {#{{ app.session.flash('error') }}#}
-            {#</div>#}
-        {#{% endif %}#}
+        {% if app.session.flashbag.get('error') %}
+            <div class="flash_error">
+                {{ flash_message }}
+            </div>
+        {% endif %}
 
         <div class="content">
             {% block content %}

@@ -22,10 +22,10 @@ class JobController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $jobs = $em->getRepository('EnsLionelBundle:Job')->findAll();
+        $entities = $em->getRepository('EnsLionelBundle:Job')->findAll();
 
         return $this->render('job/index.html.twig', array(
-            'jobs' => $jobs,
+            'entities' => $entities,
         ));
     }
 
@@ -57,12 +57,12 @@ class JobController extends Controller
      * Finds and displays a Job entity.
      *
      */
-    public function showAction(Job $job)
+    public function showAction(Job $entity)
     {
-        $deleteForm = $this->createDeleteForm($job);
+        $deleteForm = $this->createDeleteForm($entity);
 
         return $this->render('job/show.html.twig', array(
-            'job' => $job,
+            'entity' => $entity,
             'delete_form' => $deleteForm->createView(),
         ));
     }

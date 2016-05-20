@@ -8,7 +8,7 @@
 {% block content %}
     <div id="jobs">
         <table class="jobs">
-            {% for entity in jobs %}
+            {% for entity in entities %}
                 <tr class="{{ cycle(['even', 'odd'], loop.index) }}">
                     <td class="location">{{ entity.location }}</td>
                     <td class="position">
