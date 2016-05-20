@@ -1,0 +1,4 @@
+services:
+#    ens_lionel_guerin.example:
+#        class: Ens\LionelGuerinBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
