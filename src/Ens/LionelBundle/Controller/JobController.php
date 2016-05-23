@@ -27,6 +27,7 @@ class JobController extends Controller
         foreach($categories as $category)
         {
             $category->setActiveJobs($em->getRepository('EnsLionelBundle:Job')->getActiveJobs($category->getId(), $this->container->getParameter('max_jobs_on_homepage')));
+            $category->setMoreJobs($em->getRepository('EnsLionelBundle:Job')->countActiveJobs($category->getId()) - $this->container->getParameter('max_jobs_on_homepage'));
         }
 
         return $this->render('job/index.html.twig', array(

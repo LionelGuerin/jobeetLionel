@@ -9,3 +9,7 @@ ens_lionel_homepage:
 EnsLionelBundle_homepage:
     path:  /
     defaults: { _controller: EnsLionelBundle:Job:index }
+
+EnsLionelBundle_category:
+    path:  /category/{slug}
+    defaults: { _controller: EnsLionelBundle:Category:show }
