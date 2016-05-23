@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aad0296d-02b1-4dfb-a54f-06b2370b6e89" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ens/LionelBundle/DataFixtures/ORM/LoadJobData.php" afterPath="$PROJECT_DIR$/src/Ens/LionelBundle/DataFixtures/ORM/LoadJobData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ens/LionelBundle/Entity/Category.php" afterPath="$PROJECT_DIR$/src/Ens/LionelBundle/Entity/Category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ens/LionelBundle/Controller/JobController.php" afterPath="$PROJECT_DIR$/src/Ens/LionelBundle/Controller/JobController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ens/LionelBundle/Repository/JobRepository.php" afterPath="$PROJECT_DIR$/src/Ens/LionelBundle/Repository/JobRepository.php" />
     </list>
     <ignored path="jobeetLionel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,13 +29,14 @@
       <file leaf-file-name="JobController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/Controller/JobController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="-17.653847">
+              <caret line="76" column="57" selection-start-line="76" selection-start-column="57" selection-end-line="76" selection-end-column="57" />
               <folding>
                 <element signature="e#484#510#1#PHP" expanded="true" />
                 <element signature="e#637#658#1#PHP" expanded="true" />
                 <element signature="e#793#814#0#PHP" expanded="true" />
                 <element signature="e#1431#1450#0#PHP" expanded="true" />
+                <element signature="e#1751#1772#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JobRepository.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JobRepository.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/Repository/JobRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.884615">
-              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.95163584">
+              <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -124,10 +126,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadJobData.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoadJobData.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/DataFixtures/ORM/LoadJobData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.95163584">
+            <state vertical-scroll-proportion="-25.73077">
               <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
               <folding>
                 <element signature="e#52#98#0#PHP" expanded="true" />
@@ -164,10 +166,10 @@
         <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Repository/CategoryRepository.php" />
         <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Entity/Category.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/job/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Repository/JobRepository.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Controller/JobController.php" />
         <option value="$PROJECT_DIR$/src/Ens/LionelBundle/DataFixtures/ORM/LoadJobData.php" />
+        <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Controller/JobController.php" />
+        <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Repository/JobRepository.php" />
       </list>
     </option>
   </component>
@@ -845,6 +847,7 @@
             <element signature="e#637#658#1#PHP" expanded="true" />
             <element signature="e#793#814#0#PHP" expanded="true" />
             <element signature="e#1431#1450#0#PHP" expanded="true" />
+            <element signature="e#1751#1772#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1056,14 +1059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/Repository/JobRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.884615">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1072,26 +1067,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/DataFixtures/ORM/LoadJobData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.73077">
+          <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
+          <folding>
+            <element signature="e#52#98#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/Controller/JobController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="-17.653847">
+          <caret line="76" column="57" selection-start-line="76" selection-start-column="57" selection-end-line="76" selection-end-column="57" />
           <folding>
             <element signature="e#484#510#1#PHP" expanded="true" />
             <element signature="e#637#658#1#PHP" expanded="true" />
             <element signature="e#793#814#0#PHP" expanded="true" />
             <element signature="e#1431#1450#0#PHP" expanded="true" />
+            <element signature="e#1751#1772#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/DataFixtures/ORM/LoadJobData.php">
+    <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/Repository/JobRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.95163584">
-          <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
-          <folding>
-            <element signature="e#52#98#0#PHP" expanded="true" />
-          </folding>
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
