@@ -11,5 +11,5 @@ EnsLionelBundle_homepage:
     defaults: { _controller: EnsLionelBundle:Job:index }
 
 EnsLionelBundle_category:
-    path:  /category/{slug}
-    defaults: { _controller: EnsLionelBundle:Category:show }
+    path:  /category/{slug}/{page}
+    defaults: { _controller: EnsLionelBundle:Category:show, page: 1 }
