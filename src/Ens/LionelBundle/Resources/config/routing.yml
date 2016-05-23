@@ -13,3 +13,13 @@ EnsLionelBundle_homepage:
 EnsLionelBundle_category:
     path:  /category/{slug}/{page}
     defaults: { _controller: EnsLionelBundle:Category:show, page: 1 }
+
+login:
+    path:   /login
+    defaults:  { _controller: EnsLionelBundle:Default:login }
+
+login_check:
+    path:   /login_check
+
+logout:
+    path:   /logout
