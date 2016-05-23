@@ -44,3 +44,8 @@ ens_job_publish:
     path:  /{token}/publish
     defaults: { _controller: "EnsLionelBundle:Job:publish" }
     methods: [POST]
+
+ens_job_extend:
+    path:  /{token}/extend
+    defaults: { _controller: "EnsLionelBundle:Job:extend" }
+    methods: [POST]
