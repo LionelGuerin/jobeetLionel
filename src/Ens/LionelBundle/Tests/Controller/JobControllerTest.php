@@ -4,11 +4,11 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class JobControllerTest extends WebTestCase
 {
-    public function getMostRecentProgrammingJob()
+    public function getMostRecentProgrammingJob(EntityManager $entityManager)
     {
         $kernel = static::createKernel();
         $kernel->boot();
-        $em = $kernel->getContainer()->get('doctrine.orm.entity_manager');
+        $em = $entityManager;
 
         $query = $em->createQuery('SELECT j from EnsLionelBundle:Job j LEFT JOIN j.category c WHERE c.slug = :slug AND j.expires_at > :date ORDER BY j.created_at DESC');
         $query->setParameter('slug', 'programming');
@@ -17,11 +17,11 @@ class JobControllerTest extends WebTestCase
         return $query->getSingleResult();
     }
 
-    public function getExpiredJob()
+    public function getExpiredJob(EntityManager $entityManager)
     {
         $kernel = static::createKernel();
         $kernel->boot();
-        $em = $kernel->getContainer()->get('doctrine.orm.entity_manager');
+        $em = $entityManager;
 
         $query = $em->createQuery('SELECT j from EnsLionelBundle:Job j WHERE j.expires_at < :date');     $query->setParameter('date', date('Y-m-d H:i:s', time()));
         $query->setParameter('date', date('Y-m-d H:i:s', time()));
@@ -123,11 +123,11 @@ class JobControllerTest extends WebTestCase
         return $client;
     }
 
-    public function getJobByPosition($position)
+    public function getJobByPosition(EntityManager $entityManager, $position)
     {
         $kernel = static::createKernel();
         $kernel->boot();
-        $em = $kernel->getContainer()->get('doctrine.orm.entity_manager');
+        $em = $entityManager;
 
         $query = $em->createQuery('SELECT j from EnsLionelBundle:Job j WHERE j.position = :position');
         $query->setParameter('position', $position);
@@ -135,7 +135,7 @@ class JobControllerTest extends WebTestCase
         return $query->getSingleResult();
     }
 
-    public function testPublishJob()
+    public function testPublishJob(EntityManager $entityManager)
     {
         $client = $this->createJob(array('job[position]' => 'FOO1'));
         $crawler = $client->getCrawler();
@@ -144,14 +144,14 @@ class JobControllerTest extends WebTestCase
 
         $kernel = static::createKernel();
         $kernel->boot();
-        $em = $kernel->getContainer()->get('doctrine.orm.entity_manager');
+        $em = $entityManager;
 
         $query = $em->createQuery('SELECT count(j.id) from EnsLionelBundle:Job j WHERE j.position = :position AND j.is_activated = 1');
         $query->setParameter('position', 'FOO1');
         $this->assertTrue(0 < $query->getSingleScalarResult());
     }
 
-    public function testDeleteJob()
+    public function testDeleteJob(EntityManager $entityManager)
     {
         $client = $this->createJob(array('job[position]' => 'FOO2'));
         $crawler = $client->getCrawler();
@@ -160,14 +160,14 @@ class JobControllerTest extends WebTestCase
 
         $kernel = static::createKernel();
         $kernel->boot();
-        $em = $kernel->getContainer()->get('doctrine.orm.entity_manager');
+        $em = $entityManager;
 
         $query = $em->createQuery('SELECT count(j.id) from EnsLionelBundle:Job j WHERE j.position = :position');
         $query->setParameter('position', 'FOO2');
         $this->assertTrue(0 == $query->getSingleScalarResult());
     }
 
-    public function testExtendJob()
+    public function testExtendJob(EntityManager $entityManager)
     {
         // A job validity cannot be extended before the job expires soon
         $client = $this->createJob(array('job[position]' => 'FOO4'), true);
@@ -181,7 +181,7 @@ class JobControllerTest extends WebTestCase
         // Get the job and change the expire date to today
         $kernel = static::createKernel();
         $kernel->boot();
-        $em = $kernel->getContainer()->get('doctrine.orm.entity_manager');
+        $em = $entityManager;
         $job = $em->getRepository('EnsLionelBundle:Job')->findOneByPosition('FOO5');
         $job->setExpiresAt(new \DateTime());
         $em->flush();
