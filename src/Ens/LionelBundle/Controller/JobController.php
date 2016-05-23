@@ -35,27 +35,45 @@ class JobController extends Controller
         ));
     }
 
+    public function newAction()
+    {
+        $entity = new Job();
+        $entity->setType('full-time');
+        $form   = $this->createForm(new JobType(), $entity);
+
+        return $this->render('job/new.html.twig', array(
+            'entity' => $entity,
+            'form'   => $form->createView()
+        ));
+    }
+
     /**
      * Creates a new Job entity.
      *
      */
-    public function newAction(Request $request)
+    public function createAction(Request $request)
     {
-        $job = new Job();
-        $form = $this->createForm('Ens\LionelBundle\Form\JobType', $job);
-        $form->handleRequest($request);
+        $entity  = new Job();
+        $form    = $this->createForm(new JobType(), $entity);
+        $form->bindRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($job);
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getEntityManager();
+
+            $em->persist($entity);
             $em->flush();
 
-            return $this->redirectToRoute('ens_job_show', array('id' => $job->getId()));
+            return $this->redirect($this->generateUrl('ens_job_show', array(
+                'company' => $entity->getCompanySlug(),
+                'location' => $entity->getLocationSlug(),
+                'id' => $entity->getId(),
+                'position' => $entity->getPositionSlug()
+            )));
         }
 
         return $this->render('job/new.html.twig', array(
-            'job' => $job,
-            'form' => $form->createView(),
+            'entity' => $entity,
+            'form'   => $form->createView()
         ));
     }
 
@@ -80,6 +98,10 @@ class JobController extends Controller
             'delete_form' => $deleteForm->createView(),
 
         ));
+    }
+
+    public function updateAction($id)
+    {
     }
 
     /**

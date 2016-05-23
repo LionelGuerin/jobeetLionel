@@ -15,10 +15,20 @@ ens_job_new:
     defaults: { _controller: "EnsLionelBundle:Job:new" }
     methods:  [GET, POST]
 
+ens_job_create:
+    path:     /create
+    defaults: { _controller: "EnsLionelBundle:Job:create" }
+    methods:  [GET, POST]
+
 ens_job_edit:
     path:     /{id}/edit
     defaults: { _controller: "EnsLionelBundle:Job:edit" }
-    methods:  [GET, POST]
+    methods:  [POST]
+
+ens_job_update:
+    path:     /{id}/update
+    defaults: { _controller: "EnsLionelBundle:Job:update" }
+    methods:  [POST]
 
 ens_job_delete:
     path:     /{id}/delete
