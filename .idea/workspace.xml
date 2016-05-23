@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aad0296d-02b1-4dfb-a54f-06b2370b6e89" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Ens/LionelBundle/Admin/CategoryAdmin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Ens/LionelBundle/Admin/JobAdmin.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ens/LionelBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Ens/LionelBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ens/LionelBundle/Admin/JobAdmin.php" afterPath="$PROJECT_DIR$/src/Ens/LionelBundle/Admin/JobAdmin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ens/LionelBundle/Controller/JobAdminController.php" afterPath="$PROJECT_DIR$/src/Ens/LionelBundle/Controller/JobAdminController.php" />
     </list>
     <ignored path="jobeetLionel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,10 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list_image.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="list_image.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/JobAdmin/list_image.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07254623">
+            <state vertical-scroll-proportion="-1.9615384">
               <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
               <folding />
             </state>
@@ -116,19 +113,23 @@
       <file leaf-file-name="JobAdmin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/Admin/JobAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="24.192308">
-              <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-              <folding />
+            <state vertical-scroll-proportion="-25.076923">
+              <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+              <folding>
+                <element signature="e#42#85#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validation.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/Resources/config/validation.yml">
+      <file leaf-file-name="JobAdminController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/Controller/JobAdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-              <folding />
+            <state vertical-scroll-proportion="0.95163584">
+              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+              <folding>
+                <element signature="e#1691#1712#1#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -173,15 +174,15 @@
         <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Tests/Controller/JobControllerTest.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Controller/CategoryAdminController.php" />
-        <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Controller/JobAdminController.php" />
         <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Resources/config/validation.yml" />
         <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Form/JobType.php" />
         <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/config/services.yml" />
         <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Admin/CategoryAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Admin/JobAdmin.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/JobAdmin/list_image.html.twig" />
+        <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Admin/JobAdmin.php" />
+        <option value="$PROJECT_DIR$/src/Ens/LionelBundle/Controller/JobAdminController.php" />
       </list>
     </option>
   </component>
@@ -193,7 +194,7 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="860" />
+    <option name="width" value="910" />
     <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -956,10 +957,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="860" height="867" extended-state="0" />
+    <frame x="-7" y="0" width="910" height="867" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40758294" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38478747" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1382,14 +1383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/Controller/JobAdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19345662">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1441,14 +1434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/Admin/JobAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="24.192308">
-          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/Admin/CategoryAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-24.846153">
@@ -1461,9 +1446,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/JobAdmin/list_image.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07254623">
+        <state vertical-scroll-proportion="-1.9615384">
           <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/Admin/JobAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.076923">
+          <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+          <folding>
+            <element signature="e#42#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ens/LionelBundle/Controller/JobAdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.95163584">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+          <folding>
+            <element signature="e#1691#1712#1#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
