@@ -9,7 +9,7 @@ use Ens\LionelBundle\Entity\Category;
  */
 class CategoryController extends Controller
 {
-    public function showAction($slug, $page)
+    public function showAction(Request $request, $slug, $page)
     {
         $em = $this->getDoctrine()->getEntityManager();
 
@@ -27,13 +27,16 @@ class CategoryController extends Controller
 
         $category->setActiveJobs($em->getRepository('EnsLionelBundle:Job')->getActiveJobs($category->getId(), $jobs_per_page, ($page - 1) * $jobs_per_page));
 
-        return $this->render('category/show.html.twig', array(
+        $format = $request->getRequestFormat();
+
+        return $this->render('EnsLionelBundle:Category:show.'.$format.'.twig', array(
             'category' => $category,
             'last_page' => $last_page,
             'previous_page' => $previous_page,
             'current_page' => $page,
             'next_page' => $next_page,
-            'total_jobs' => $total_jobs
+            'total_jobs' => $total_jobs,
+            'feedId' => sha1($this->get('router')->generate('EnsLionelBundle_category', array('slug' =>  $category->getSlug(), '_format' => 'atom'), true)),
         ));
     }
 }
