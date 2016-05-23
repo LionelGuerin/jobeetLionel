@@ -1,4 +1,4 @@
-Ens\JobeetBundle\Entity\Job:
+Ens\LionelBundle\Entity\Job:
     properties:
         category:
             - NotBlank: ~

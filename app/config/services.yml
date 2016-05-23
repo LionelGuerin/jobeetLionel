@@ -4,6 +4,14 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    ens.lionel.admin.category:
+        class: Ens\LionelBundle\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: jobeet, label: Categories }
+        arguments: [null, Ens\LionelBundle\Entity\Category, EnsLionelBundle:CategoryAdmin]
+
+    ens.lionel.admin.job:
+        class: Ens\LionelBundle\Admin\JobAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: jobeet, label: Jobs }
+        arguments: [null, Ens\LionelBundle\Entity\Job, EnsLionelBundle:JobAdmin]
