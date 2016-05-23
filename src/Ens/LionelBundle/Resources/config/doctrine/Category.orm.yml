@@ -1,6 +1,7 @@
 services:
 Ens\LionelBundle\Entity\Category:
   type: entity
+  repositoryClass: Ens\LionelBundle\Repository\CategoryRepository
   table: category
   id:
     id:
