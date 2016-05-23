@@ -1,6 +1,7 @@
 services:
 Ens\LionelBundle\Entity\Job:
   type: entity
+  repositoryClass: Ens\LionelBundle\Repository\JobRepository
   table: job
   id:
     id:
