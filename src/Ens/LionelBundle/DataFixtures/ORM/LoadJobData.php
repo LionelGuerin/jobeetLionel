@@ -60,6 +60,7 @@ class LoadJobData extends AbstractFixture implements OrderedFixtureInterface
 
         $em->persist($job_sensio_labs);
         $em->persist($job_extreme_sensio);
+        $em->persist($job_expired);
 
         $em->flush();
     }
