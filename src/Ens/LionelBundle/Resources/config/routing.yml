@@ -13,12 +13,3 @@ EnsLionelBundle_homepage:
 EnsLionelBundle_category:
     path:  /category/{slug}/{page}
     defaults: { _controller: EnsLionelBundle:Category:show, page: 1 }
-
-admin:
-    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
-    prefix: /admin
-
-_sonata_admin:
-    resource: .
-    type: sonata_admin
-    prefix: /admin
