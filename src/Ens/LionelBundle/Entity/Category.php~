@@ -3,6 +3,7 @@
 namespace Ens\LionelBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Ens\LionelBundle\Utils\Jobeet;
 
 /**
  * Category
@@ -30,6 +31,8 @@ class Category
     private $category_affiliates;
 
     private $active_jobs;
+
+    private $more_jobs;
 
     /**
      * Constructor
@@ -152,5 +155,20 @@ class Category
     public function getActiveJobs()
     {
         return $this->active_jobs;
+    }
+
+    public function getSlug()
+    {
+        return Jobeet::slugify($this->getName());
+    }
+
+    public function setMoreJobs($jobs)
+    {
+        $this->more_jobs = $jobs >=  0 ? $jobs : 0;
+    }
+
+    public function getMoreJobs()
+    {
+        return $this->more_jobs;
     }
 }

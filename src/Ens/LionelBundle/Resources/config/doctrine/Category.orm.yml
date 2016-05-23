@@ -12,6 +12,10 @@ Ens\LionelBundle\Entity\Category:
       type: string
       length: 255
       unique: true
+    slug:
+      type: string
+      length: 255
+      unique: true
   oneToMany:
     jobs:
       targetEntity: Job
@@ -19,3 +23,6 @@ Ens\LionelBundle\Entity\Category:
     category_affiliates:
       targetEntity: CategoryAffiliate
       mappedBy: category
+  lifecycleCallbacks:
+    prePersist: [ setSlugValue ]
+    preUpdate: [ setSlugValue ]
