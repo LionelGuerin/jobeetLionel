@@ -29,7 +29,7 @@ class CategoryController extends Controller
 
         $format = $request->getRequestFormat();
 
-        return $this->render('EnsLionelBundle:Category:show.'.$format.'.twig', array(
+        return $this->render('category/show.'.$format.'.twig', array(
             'category' => $category,
             'last_page' => $last_page,
             'previous_page' => $previous_page,
