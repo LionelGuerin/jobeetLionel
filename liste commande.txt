@@ -1,0 +1,15 @@
+_Création de la BDD
+_Création du schéma de BDD
+_Insertion des données de la BDD
+_Création de l'utilisateur (admin sonata)
+_Démarrage du serveur
+
+php app/console doctrine:database:create
+
+php app/console doctrine:schema:create
+
+php app/console doctrine:fixtures:load
+
+php app/console ens:lionel:users login password
+
+php app/console server:run
